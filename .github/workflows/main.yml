@@ -28,7 +28,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to FTP
-        uses: sebastianpopp/git-ftp-action@releases/v3
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.krakphpbe.webhosting.be
           username: github@krakphpbe
