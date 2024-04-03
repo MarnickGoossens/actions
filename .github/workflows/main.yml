@@ -34,17 +34,13 @@ jobs:
           username: github@krakphpbe
           password: bpuaappai01
           exclude: |
-            .git/** # Exclude all files/directories under .git
-            .github/** # Exclude all files/directories under .github
+            **/.git*
+            **/.git*/**
             .htaccess # Exclude .htaccess file
-            .idea
-            .idea/**
-            database
-            database/**
-            node_modules
-            node_modules/**
-            tests
-            tests/**
+            **/.idea/**
+            **/database/**
+            **/node_modules/**
+            **/tests/**
             .editorconfig
             .env.example
             .gitattrivutes
