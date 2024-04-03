@@ -33,24 +33,3 @@ jobs:
           url: ftp.krakphpbe.webhosting.be
           user: github@krakphpbe
           password: bpuaappai01
-          exclude: |
-            **/.git*
-            **/.git*/**
-            .htaccess # Exclude .htaccess file
-            **/.idea/**
-            **/database/**
-            **/node_modules/**
-            **/tests/**
-            .editorconfig
-            .env.example
-            .gitattrivutes
-            .gitignore
-            artisan
-            composer.lock
-            package-lock.json
-            package.json
-            phpunit.xml
-            postcss.config.js
-            README.md
-            tailwind.config.js
-            vite.config.js          
