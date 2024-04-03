@@ -28,8 +28,33 @@ jobs:
         run: npm run build
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: sebastianpopp/git-ftp-action@releases/v3
         with:
           server: ftp.krakphpbe.webhosting.be
           username: github@krakphpbe
           password: bpuaappai01
+          exclude: |
+            .git/** # Exclude all files/directories under .git
+            .github/** # Exclude all files/directories under .github
+            .htaccess # Exclude .htaccess file
+            .idea
+            .idea/**
+            database
+            database/**
+            node_modules
+            node_modules/**
+            tests
+            tests/**
+            .editorconfig
+            .env.example
+            .gitattrivutes
+            .gitignore
+            artisan
+            composer.lock
+            package-lock.json
+            package.json
+            phpunit.xml
+            postcss.config.json
+            README.md
+            tailwind.config.json
+            vite.config.json            
